@@ -1,26 +1,7 @@
+{% extends 'blog/base.html' %}
 {% load static %}
 
-<html>
-    <head>
-        <title>Utility.</title>
-        <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
-        <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap-theme.min.css">
-        <link href="https://fonts.googleapis.com/css?family=Special+Elite&display=swap" rel="stylesheet">
-        <link href="https://fonts.googleapis.com/css?family=Montserrat&display=swap" rel="stylesheet">
-        <link rel="stylesheet" href="{% static 'css/blog.css' %}">
-    </head>
-    <body>
-        <div class="page-header">
-            <h1><a href="/">Utility.</a></h1>
-                <div class="navbar">
-                    <ul class="nav">
-                        <li><a href="#" style="text-decoration: none">HOME</a></li>
-                        <li><a href="#" style="text-decoration: none">CLASSICS</a></li>
-                        <li><a href="#" style="text-decoration: none">MUST HAVES</a></li>
-                        <li><a href="{% url 'post_new' %}" style="text-decoration: none">CREATE POST</a></li>
-                    </ul>
-                </div>
-        </div>
+        {% block content %}
 
         <div id="homescreen">
             <img src="\static\bilder\homeneu.jpg" width="100%">
@@ -31,23 +12,26 @@
                 </div>
         </div>  
 
-        <div class="content container">
+        <div class="contentcontainer">
             <div class="row">
                 <div class="col-md-8">
-                    {% block content %}
-                        {% for post in posts %}
-                            <div class="post">
-                                <h2><a href="{% url 'post_detail' pk=post.pk %}">{{ post.title }}</a></h2>
-                                <div class="date">
-                                    <p>published: {{ post.published_date }}</p>
-                                </div>
-                                <img src="{{Post.thumb.url}}">
-                                <p>{{ post.text|linebreaksbr }}</p>
+                    {% for post in posts %}
+                        <div class="post">
+                            <h2><a href="{% url 'post_detail' pk=post.pk %}">{{ post.title }}</a></h2>
+                            <div class="date">
+                                <p>veröffentlicht: {{ post.published_date }} (Autor: {{ post.author }})</p>
                             </div>
-                        {% endfor %}
-                    {% endblock %}
+                            <img src="{{Post.thumb.url}}">
+                            <p>{{ post.snippet}}</p>
+                        </div>
+                    {% endfor %}
+                </div>
+                <div class="col-md-4">
+                    <div class="sidebar">
+                        
+                    </div>                    
                 </div>
             </div>
         </div>
-    </body>
-</html>
+
+        {% endblock %}

@@ -13,27 +13,45 @@
 
     <body>
         <div class="page-header">
-            <h1>Utility.</a></h1>
+            <h1>Utility.</h1>
             <div class="navbar">
                 <ul class="nav">
-                    <li><a href="#" style="text-decoration: none">HOME</a></li>
-                    <li><a href="#" style="text-decoration: none">CLASSICS</a></li>
+                    <li><a href="{% url 'blog'}" style="text-decoration: none">BLOG</a></li>
+                    <li><a href="/classics/" style="text-decoration: none">CLASSICS</a></li>
                     <li><a href="#" style="text-decoration: none">MUST HAVES</a></li>
                     <li><a href="{% url 'post_new' %}" style="text-decoration: none">CREATE POST</a></li>
                 </ul>
             </div>
         </div>
 
-        <div class="content container">
-            <div class="row">
-                <div class="col-md-4">
 
-                </div>
-                <div class="col-md-8">
-                {% block content %}
-                {% endblock %}
-                </div>
-            </div>
-        </div>
+    {% block content %}
+    {% endblock %}
+
     </body>
+
+    <footer>
+        <div class="row">
+        <div class="col-md-4">
+            <a href="imprint.html" id="imprint">IMPRINT</a> 
+        </div>
+    
+        <div class="col-md-4">
+            <h8>Utility.</h8>
+                <div class="navfooter">
+                    <ul class="navfoot">
+                        <li><a href="https://de-de.facebook.com/"><img src="static/bilder/facebook.png"></a></li>
+                        <li><a href="https://www.pinterest.de/"><img src="static/bilder/pinterest.png"></a></li>
+                        <li><a href="https://www.instagram.com/"><img src="static/bilder/instagram.png"></a></li>
+                        <li><a href="https://www.youtube.com/?gl=DE&hl=de"><img src="static/bilder/youtube.png"></a></li>
+                        <li><a href="https://twitter.com/?lang=de"><img src="static/bilder/twitter.png"></a></li>
+                    </ul>
+                </div>
+        </div>
+    
+        <div class="col-md-4">
+            <a href="contact.html" id="contact">CONTACT</a> 
+        </div>
+        </div>
+    </footer>
 </html>
