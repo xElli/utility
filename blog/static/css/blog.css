@@ -49,7 +49,15 @@ h6{
     font-family: 'Special Elite';
     font-size: 45px;
     margin-left: 0%;
-    margin-bottom: 0%;
+    margin-bottom: -5%;
+}
+
+#log{
+    margin-left: 2%;
+}
+
+#sign{
+    margin-left: 2%;
 }
 
 h8{
@@ -72,7 +80,7 @@ body {
 
 .page-header {
     position: fixed;
-    background-color:white;
+    background-color: white;
     width: 100%;
     margin-top: 0%;
     z-index: 999;
@@ -80,7 +88,7 @@ body {
 
 .page-header h1, .page-header h1 a, .page-header h1 a:visited, .page-header h1 a:active {
     color: black;
-    font-size: 36pt;
+    font-size: 45pt;
     text-align: center;
     text-decoration: none;
 }
@@ -92,14 +100,29 @@ body {
     align-items: center;
     flex-direction: row;
     width: 100%;
-    background-color:white;
+    background-color: white;
 }
 
 .nav{
     display: flex;
     justify-content: center;
+    justify-self: end;
     list-style: none;
     width: 100%;
+}
+
+nav{
+    width: 100%;
+    align-self: end;
+    align-content: end;
+}
+
+nav li{
+    list-style: none;
+    justify-self: end;
+    text-align: end;
+    margin-right: 2%;
+    margin-top: 0%;
 }
 
 .navbar li{
@@ -107,6 +130,14 @@ body {
     margin-top: 5px;
     margin-left: 20px;
     margin-right: 20px;
+}
+
+nav button{
+    font-family: 'Montserrat', sans-serif;
+    background: none;
+    color: black;
+    border: 0;
+    font-size: 14px;
 }
 
 a{
@@ -152,18 +183,23 @@ a:hover{
     height:200%;
     background-color: #f0f0f0;
     margin-right: 10%;
-    margin-top: 5%;
+    margin-top: 0%;
     margin-left: 0%
 }
 
 h1, h2, h3, h4 {
-    font-family: 'Special Elite', cursive;
+    font-family: 'Special Elite', sans-serif;
 }
 
 .date {
     color: #828282;
-    margin-top: -2%;
-    margin-bottom: 5%;
+    margin-top: 0%;
+    margin-bottom: 2%;
+}
+
+p.tags {
+    font-family: 'Montserrat', sans-serif;
+    color:#828282;
 }
 
 .save {
@@ -172,6 +208,14 @@ h1, h2, h3, h4 {
 
 .post-form textarea, .post-form input {
     width: 100%;
+    margin-top: 1%;
+    margin-bottom: 3%;
+}
+
+.site-form{
+    border: 1px solid #f0f0f0;
+    padding: 4%;
+
 }
 
 .top-menu, .top-menu:hover, .top-menu:visited {
@@ -185,12 +229,16 @@ h1, h2, h3, h4 {
     margin-bottom: 50px;
     margin-left: 4%;
     margin-right: 4%;
-    border-bottom: #f0f0f0;
-    border-bottom-style: solid;
+    padding: 4%;
+    border: 1px solid #f0f0f0;
 }
 
 .post h2 a, .post h2 a:visited {
     color: #000000;
+}
+
+.post_detail .post img{
+    max-width: 100%;
 }
 
 .edit{
@@ -251,4 +299,24 @@ footer{
 
 .edit{
     margin-bottom: 5%;
+}
+
+.helptext{
+    line-height: 1.8;
+    margin-top: 1%;
+    margin-bottom: 3%;
+
+}
+
+.site-form{
+    margin-top: 1%;
+    margin-left: 2%;
+}
+
+.input[type=button], input[type=submit]{
+    background-color: #ffffff;
+}
+
+.imgzentriert{
+    text-align: center;
 }

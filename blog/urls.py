@@ -9,7 +9,7 @@ urlpatterns = [
     path('post/new/', views.post_new, name='post_new'),
     path('post/<int:pk>/edit/', views.post_edit, name='post_edit'),
     url(r'^classics/$', views.classics, name='classics'),
-    url(r'^blog/$', views.blog, name='blog')
+    url(r'^blog/$', views.post_list, name='blog')
 ]
 
 urlpatterns += staticfiles_urlpatterns()

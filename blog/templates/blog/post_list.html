@@ -22,7 +22,8 @@
                                 <p>veröffentlicht: {{ post.published_date }} (Autor: {{ post.author }})</p>
                             </div>
                             <img src="{{Post.thumb.url}}">
-                            <p>{{ post.snippet}}</p>
+                            <p>{{ post.snippet }}</p>
+                            <p class="tags">Tags: {{ post.tags }}</p>
                         </div>
                     {% endfor %}
                 </div>
