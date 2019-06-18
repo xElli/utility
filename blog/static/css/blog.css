@@ -60,6 +60,12 @@ h6{
     margin-left: 2%;
 }
 
+h7{
+    font-family: 'Special Elite';
+    font-size: 20px;
+    text-align: center;
+}
+
 h8{
     font-family: 'Special Elite';
     font-size: 25px;
@@ -180,12 +186,13 @@ a:hover{
 }
 
 .sidebar{
-    height:200%;
+    height:auto;
     background-color: #f0f0f0;
     margin-right: 10%;
     margin-top: 0%;
-    margin-left: 0%
+    margin-left: 0%;
 }
+
 
 h1, h2, h3, h4 {
     font-family: 'Special Elite', sans-serif;
@@ -317,6 +324,4 @@ footer{
     background-color: #ffffff;
 }
 
-.imgzentriert{
-    text-align: center;
-}
+
